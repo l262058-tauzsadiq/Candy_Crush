@@ -1,0 +1,26 @@
+
+# Ignore generated build files
+game/build/*
+
+# Keep required SFML runtime DLLs
+!game/build/sfml-graphics-2.dll
+!game/build/sfml-window-2.dll
+!game/build/sfml-system-2.dll
+
+# Ignore generated executables and object files
+*.exe
+*.o
+*.obj
+
+# Temporary files
+*.log
+*.tmp
+*.pdb
+*.ilk
+
+# Visual Studio temporary files
+.vs/
+
+# Windows temporary files
+Thumbs.db
+Desktop.ini
