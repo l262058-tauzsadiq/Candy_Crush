@@ -1,24 +1,33 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "prototype.h"
 using namespace std;
 
 int main()
+
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Candy Crush");
+    
+    cout << "hello from main" << endl;
 
-    while (window.isOpen())
-    {
-        sf::Event event;
+    foo1();
+    foo2();
+    foo3();
 
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+    // sf::RenderWindow window(sf::VideoMode(800, 600), "Candy Crush");
 
-        window.clear(sf::Color::Black);
-        window.display();
-    }
+    // while (window.isOpen())
+    // {
+    //     sf::Event event;
+
+    //     while (window.pollEvent(event))
+    //     {
+    //         if (event.type == sf::Event::Closed)
+    //             window.close();
+    //     }
+
+    //     window.clear(sf::Color::Black);
+    //     window.display();
+    // }
 
     return 0;
 }

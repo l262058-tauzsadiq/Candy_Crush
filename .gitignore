@@ -1,26 +1,57 @@
 
-# Ignore generated build files
-game/build/*
+# ==========================================
+# Candy Crush - Generated Build Files
+# ==========================================
+
+# Ignore generated build contents
+/game/build/*
 
 # Keep required SFML runtime DLLs
-!game/build/sfml-graphics-2.dll
-!game/build/sfml-window-2.dll
-!game/build/sfml-system-2.dll
+!/game/build/sfml-graphics-2.dll
+!/game/build/sfml-window-2.dll
+!/game/build/sfml-system-2.dll
 
-# Ignore generated executables and object files
+
+# ==========================================
+# Compiled Files
+# ==========================================
+
+# Executables
 *.exe
+
+# Object files
 *.o
 *.obj
 
-# Temporary files
-*.log
-*.tmp
+# Debug and temporary compiler files
 *.pdb
 *.ilk
+*.log
+*.tmp
 
-# Visual Studio temporary files
+
+# ==========================================
+# IDE Temporary Files
+# ==========================================
+
+# Visual Studio
 .vs/
 
-# Windows temporary files
+# VS Code workspace-specific files
+# (Keep shared project settings in .vscode)
+*.code-workspace
+
+
+# ==========================================
+# Windows Temporary Files
+# ==========================================
+
 Thumbs.db
 Desktop.ini
+
+
+# ==========================================
+# Operating System Files
+# ==========================================
+
+.DS_Store

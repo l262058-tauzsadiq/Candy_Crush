@@ -1,2 +1,36 @@
-# Auto detect text files and perform LF normalization
+
+# Automatically detect text files and normalize line endings
 * text=auto
+
+# C++ source and header files
+*.cpp text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+
+# Configuration and script files
+*.json text eol=lf
+*.ps1 text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+
+# Binary files
+*.dll binary
+*.exe binary
+*.o binary
+*.obj binary
+*.a binary
+*.lib binary
+
+# Image and audio resources
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.bmp binary
+*.gif binary
+*.wav binary
+*.ogg binary
+*.mp3 binary
+
+# Font resources
+*.ttf binary
+*.otf binary
