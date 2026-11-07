@@ -6,28 +6,22 @@ using namespace std;
 int main()
 
 {
-    
-    cout << "hello from main" << endl;
 
-    foo1();
-    foo2();
-    foo3();
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Candy Crush");
 
-    // sf::RenderWindow window(sf::VideoMode(800, 600), "Candy Crush");
+    while (window.isOpen())
+    {
+        sf::Event event;
 
-    // while (window.isOpen())
-    // {
-    //     sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
 
-    //     while (window.pollEvent(event))
-    //     {
-    //         if (event.type == sf::Event::Closed)
-    //             window.close();
-    //     }
-
-    //     window.clear(sf::Color::Black);
-    //     window.display();
-    // }
+        window.clear(sf::Color::Black);
+        window.display();
+    }
 
     return 0;
 }
