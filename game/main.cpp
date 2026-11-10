@@ -5,21 +5,25 @@ using namespace std;
 
 int main(){
 
-    sf::RenderWindow window(sf::VideoMode(1200, 800), "Candy Crush");
+    
+    // here game_window is the object name and before that RenderWindow is a class 
+    // these concepts will be studied in 2nd semester so leave it for now
+    // just keep in mind that we will write object name using '_' to identify them
+    sf::RenderWindow game_window(sf::VideoMode(1200, 800), "Candy Crush");
 
-    while (window.isOpen())
+    while (game_window.isOpen())
     {
-        sf::Event event;
+        sf::Event closing_check; // similarly this closing_check is also a name for obj
 
-        while (window.pollEvent(event))
+        while (game_window.pollEvent(closing_check))
         {
-            if (event.type == sf::Event::Closed){
-                window.close();
+            if (closing_check.type == sf::Event::Closed){
+                game_window.close();
             }
         }
 
-        window.clear(sf::Color::Black);
-        window.display();
+        game_window.clear(sf::Color::Black);
+        game_window.display();
     }
 
     return 0;
