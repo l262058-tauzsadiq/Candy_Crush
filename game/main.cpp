@@ -5,6 +5,7 @@ using namespace std;
 
 int main(){
 
+    // testing if pull works or not
     
     // here game_window is the object name and before that RenderWindow is a class 
     // these concepts will be studied in 2nd semester so leave it for now
