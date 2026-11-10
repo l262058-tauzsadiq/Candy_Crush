@@ -3,11 +3,9 @@
 #include "prototype.h"
 using namespace std;
 
-int main()
+int main(){
 
-{
-
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Candy Crush");
+    sf::RenderWindow window(sf::VideoMode(1200, 800), "Candy Crush");
 
     while (window.isOpen())
     {
@@ -15,8 +13,9 @@ int main()
 
         while (window.pollEvent(event))
         {
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed){
                 window.close();
+            }
         }
 
         window.clear(sf::Color::Black);
