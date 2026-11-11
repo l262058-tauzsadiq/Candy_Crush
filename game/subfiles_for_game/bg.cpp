@@ -1,6 +1,4 @@
 #include <SFML/Graphics.hpp>
-#include <iostream>
-using namespace std;
 
 void background(sf::RenderWindow& window_screen){
     sf::Texture bg_img;
