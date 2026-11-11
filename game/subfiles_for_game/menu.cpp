@@ -80,7 +80,7 @@ void displayMainMenu (sf::RenderWindow& window_screen){
             cout << "area 2 working perfectly" << endl;
         }
         if(area_3.contains(float(click_position.x), float(click_position.y))){
-            cout << "area 3 working perfectly" << endl;
+            window_screen.close();
         }
     }
     mouse_was_pressed = mouse_is_pressed;
