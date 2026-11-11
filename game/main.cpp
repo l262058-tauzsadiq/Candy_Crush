@@ -4,17 +4,11 @@
 using namespace std;
 
 int main(){
-
-    // testing if pull works or not
-    
-    // here game_window is the object name and before that RenderWindow is a class 
-    // these concepts will be studied in 2nd semester so leave it for now
-    // just keep in mind that we will write object name using '_' to identify them
-    sf::RenderWindow game_window(sf::VideoMode(1200, 800), "Candy Crush");
+    sf::RenderWindow game_window(sf::VideoMode(750, 900), "Candy Crush");
 
     while (game_window.isOpen())
     {
-        sf::Event closing_check; // similarly this closing_check is also a name for obj
+        sf::Event closing_check;
 
         while (game_window.pollEvent(closing_check))
         {
@@ -22,8 +16,12 @@ int main(){
                 game_window.close();
             }
         }
-
+        
         game_window.clear(sf::Color::Black);
+
+        background(game_window);
+        displayMainMenu(game_window);
+
         game_window.display();
     }
 
