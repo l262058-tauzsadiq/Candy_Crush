@@ -58,12 +58,17 @@ void displayMainMenu (sf::RenderWindow& window_screen){
 
     // clicking actions
 
-    // sf::FloatRect clickable_area = buttons_bg.getGlobalBounds();
     sf::FloatRect area_1 = buttons_bg_1.getGlobalBounds();
     sf::FloatRect area_2 = buttons_bg_2.getGlobalBounds();
     sf::FloatRect area_3 = buttons_bg_3.getGlobalBounds();
-    
-    if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+
+    // i was facing a problem that whenever i click once in the area, the program was calling the 
+    // functions startGame() and seeInstructions multiple time. therefore i am using a boolean value
+    bool mouse_is_pressed = sf::Mouse::isButtonPressed(sf::Mouse::Left);
+    static bool mouse_was_pressed = false; 
+    // static makes the variable lifetime upto termination of program
+
+    if(mouse_is_pressed && !mouse_was_pressed){
         sf::Vector2i click_position = sf::Mouse::getPosition(window_screen);
 
         if(area_1.contains(float(click_position.x), float(click_position.y))){
@@ -71,12 +76,12 @@ void displayMainMenu (sf::RenderWindow& window_screen){
             cout << "area 1 working perfectly" << endl;
         }
         if(area_2.contains(float(click_position.x), float(click_position.y))){
-            // see_instructions(window_screen);
+            // seeInstructions(window_screen);
             cout << "area 2 working perfectly" << endl;
         }
         if(area_3.contains(float(click_position.x), float(click_position.y))){
             cout << "area 3 working perfectly" << endl;
         }
     }
-
+    mouse_was_pressed = mouse_is_pressed;
 }
