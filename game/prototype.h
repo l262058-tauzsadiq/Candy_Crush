@@ -8,3 +8,5 @@ void displayMainMenu(sf::RenderWindow& window_screen);
 void seeInstructions(sf::RenderWindow& window_screen);
 
 void startGame(sf::RenderWindow& window_screen);
+void loadCandyTextures();
+void initializeBoard();
