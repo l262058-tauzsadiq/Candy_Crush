@@ -5,8 +5,8 @@ using namespace std;
 
 int main(){
     sf::RenderWindow game_window(sf::VideoMode(750, 900), "Candy Crush");
-    loadCandyTextures();
-    initializeBoard();
+    //loadCandyTextures();
+    //initializeBoard();
     while (game_window.isOpen())
     {
         sf::Event closing_check;
