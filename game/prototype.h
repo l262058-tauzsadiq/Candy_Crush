@@ -8,4 +8,5 @@ void displayMainMenu(sf::RenderWindow& window_screen);
 void seeInstructions(sf::RenderWindow& window_screen);
 
 void startGame(sf::RenderWindow& window_screen);
-
+void displayHowtoPlay(sf::RenderWindow&window_screen);
+void displayDifficultyLevel (sf::RenderWindow& window_screen);
