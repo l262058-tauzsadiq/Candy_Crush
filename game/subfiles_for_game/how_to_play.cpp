@@ -1,9 +1,13 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <prototype.h>
 using namespace std;
 
 void displayHowtoPlay(sf::RenderWindow&window_screen)
 {
+    window_screen.clear(sf::Color::Black);
+    background(window_screen);
+
     sf::Font font_bold;
     font_bold.loadFromFile("assets/font-bold.ttf");
     sf::Text heading("How to Play", font_bold, 60);

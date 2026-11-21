@@ -4,6 +4,10 @@
 using namespace std;
 
 void displayMainMenu (sf::RenderWindow& window_screen){
+
+    window_screen.clear(sf::Color::Black);
+    background(window_screen);
+
     sf::Font font_bold;
     font_bold.loadFromFile("assets/font-bold.ttf");
     // not using .. before assets because we have to check the
@@ -56,32 +60,4 @@ void displayMainMenu (sf::RenderWindow& window_screen){
     text_to_display.setString("Exit");
     text_to_display.setPosition(330.f, 580.f);
     window_screen.draw(text_to_display);
-
-    // clicking actions
-
-    sf::FloatRect area_1 = buttons_bg_1.getGlobalBounds();
-    sf::FloatRect area_2 = buttons_bg_2.getGlobalBounds();
-    sf::FloatRect area_3 = buttons_bg_3.getGlobalBounds();
-
-    // i was facing a problem that whenever i click once in the area, the program was calling the 
-    // functions startGame() and seeInstructions multiple time. therefore i am using a boolean value
-    bool mouse_is_pressed = sf::Mouse::isButtonPressed(sf::Mouse::Left);
-    static bool mouse_was_pressed = false; 
-    // static makes the variable lifetime upto termination of program
-
-    if(mouse_is_pressed && !mouse_was_pressed){
-        sf::Vector2i click_position = sf::Mouse::getPosition(window_screen);
-
-        if(area_1.contains(float(click_position.x), float(click_position.y))){
-            // startGame(window_screen);
-            cout << "area 1 working perfectly" << endl;
-        }
-        if(area_2.contains(float(click_position.x), float(click_position.y))){
-            displayHowtoPlay(window_screen);
-        }
-        if(area_3.contains(float(click_position.x), float(click_position.y))){
-            window_screen.close();
-        }
-    }
-    mouse_was_pressed = mouse_is_pressed;
 }

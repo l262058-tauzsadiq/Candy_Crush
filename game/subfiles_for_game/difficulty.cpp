@@ -1,9 +1,14 @@
 #include <SFML/Graphics.hpp>
+#include <prototype.h>
 #include <iostream>
 using namespace std;
 
 void displayDifficultyLevel (sf::RenderWindow& window_screen)
 {
+
+    window_screen.clear(sf::Color::Black);
+    background(window_screen);
+
     sf::Font font_bold;
     font_bold.loadFromFile("assets/font-bold.ttf");
 
