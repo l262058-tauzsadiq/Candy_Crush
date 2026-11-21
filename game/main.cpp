@@ -21,9 +21,8 @@ int main(){
         game_window.clear(sf::Color::Black);
 
         background(game_window);
-       // displayMainMenu(game_window);
-        displayHowtoPlay(game_window);                 // i was testing the code that's why i commented these
-      // displayDifficultyLevel (game_window);         // i don't know how to add screens , hope that you will handle all that stuff
+        displayMainMenu(game_window);
+        
         game_window.display();
     }
 
