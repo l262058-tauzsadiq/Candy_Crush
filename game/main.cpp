@@ -10,6 +10,7 @@ int main(){
     bool instructions_open = false;
     bool difficulty_open = false;
     bool game_start = false;
+    bool board_open = false;
 
     int candy_type, size;
 
@@ -51,18 +52,21 @@ int main(){
                     if (sf::FloatRect(267.f, 350.f, 215.f, 60.f).contains(click_position.x, click_position.y)) {
                         difficulty_open = false;
                         game_start = true;
+                        board_open = true;
                         candy_type = 3;
                         size = 5;
                     }
                     else if (sf::FloatRect(267.f, 465.f, 215.f, 60.f).contains(click_position.x, click_position.y)) {
                         difficulty_open = false;
                         game_start = true;
+                        board_open = true;
                         candy_type = 4;
                         size = 8;
                     }
                     else if (sf::FloatRect(267.f, 580.f, 215.f, 60.f).contains(click_position.x, click_position.y)) {
                         difficulty_open = false;
                         game_start = true;
+                        board_open = true;
                         candy_type = 5;
                         size = 10;
                     }
@@ -87,8 +91,11 @@ int main(){
         else if(difficulty_open){
             displayDifficultyLevel(game_window);
         }
-        if (instructions_open) {
+        else if (instructions_open) {
             displayHowtoPlay(game_window);
+        }
+        else if (board_open) {
+            displayBoard(game_window, size);
         }
 
         if(game_start){
