@@ -4,9 +4,9 @@
 void background(sf::RenderWindow& window_screen);
 // menu.cpp
 void displayMainMenu(sf::RenderWindow& window_screen);
-// instrucitons.cpp
-void seeInstructions(sf::RenderWindow& window_screen);
-
-void startGame(sf::RenderWindow& window_screen);
+// how_to_play.cpp
 void displayHowtoPlay(sf::RenderWindow&window_screen);
-void displayDifficultyLevel (sf::RenderWindow& window_screen);
+//  difficulty.cpp
+void displayDifficultyLevel(sf::RenderWindow& window_screen);
+// game.cpp
+void initializeBoard(int size, int candyTypes);
