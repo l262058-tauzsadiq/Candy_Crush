@@ -3,14 +3,13 @@
 #include <cstdlib>
 using namespace std;
 
-int board[10][10];
 sf::Texture red_candy;
 sf::Texture blue_candy;
 sf::Texture orange_candy;
 sf::Texture green_candy;
 sf::Texture purple_candy;
 
-void initializeBoard(int size, int candyTypes)
+void initializeBoard(int board[10][10], int size, int candyTypes)
 {
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
@@ -28,7 +27,7 @@ void initializeBoard(int size, int candyTypes)
     // }
 }
 
-void displayBoard(sf::RenderWindow& window_screen, int size)
+void displayBoard(sf::RenderWindow& window_screen, int board[10][10], int size)
 {
     red_candy.loadFromFile("assets/redcandy.png");
     blue_candy.loadFromFile("assets/bluecandy.png");
@@ -70,8 +69,8 @@ void displayBoard(sf::RenderWindow& window_screen, int size)
     board_bg.setFillColor(sf::Color(30, 30, 30, 180));
     window_screen.draw(board_bg);
 
-    for (int row = 0; row < size; ++row) {
-        for (int col = 0; col < size; ++col) {
+    for (int row = 0; row < size; row++) {
+        for (int col = 0; col < size; col++) {
             sf::Sprite candy;
 
             if (board[row][col] == 0) {

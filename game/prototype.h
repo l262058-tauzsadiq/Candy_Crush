@@ -9,5 +9,6 @@ void displayHowtoPlay(sf::RenderWindow&window_screen);
 //  difficulty.cpp
 void displayDifficultyLevel(sf::RenderWindow& window_screen);
 // game.cpp
-void initializeBoard(int size, int candyTypes);
-void displayBoard(sf::RenderWindow& window_screen, int size);
+void initializeBoard(int board[10][10], int size, int candyTypes);
+void displayBoard(sf::RenderWindow& window_screen, int board[10][10], int size);
+bool candyMatch(int board[10][10], int size);

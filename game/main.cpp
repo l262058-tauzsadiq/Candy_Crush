@@ -13,6 +13,7 @@ int main(){
     bool board_open = false;
 
     int candy_type, size;
+    int board[10][10] = {};
 
     sf::RenderWindow game_window(sf::VideoMode(750, 900), "Candy Crush");
     //loadCandyTextures();
@@ -84,6 +85,12 @@ int main(){
         if (!game_window.isOpen()) {
             break;
         }
+
+        if (game_start) {
+            initializeBoard(board, size, candy_type);
+            candyMatch(board, size);
+            game_start = false;
+        }
         
         if(menu_open){
             displayMainMenu(game_window);
@@ -95,14 +102,7 @@ int main(){
             displayHowtoPlay(game_window);
         }
         else if (board_open) {
-            displayBoard(game_window, size);
-        }
-
-        if(game_start){
-            initializeBoard(size, candy_type);
-            // i have added this because after one game start the board was
-            // generated continously because game start was set to be true
-            game_start = false;
+            displayBoard(game_window, board, size);
         }
 
         game_window.display();

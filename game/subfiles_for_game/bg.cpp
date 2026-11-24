@@ -7,8 +7,7 @@ void background(sf::RenderWindow& window_screen){
     bg.setTexture(bg_img);
 
     // resizing the image
-    bg.setScale(750.0f / bg_img.getSize().x,
-                900.0f / bg_img.getSize().y);
+    bg.setScale(750.0f / bg_img.getSize().x, 900.0f / bg_img.getSize().y);
 
     window_screen.draw(bg);
 }
