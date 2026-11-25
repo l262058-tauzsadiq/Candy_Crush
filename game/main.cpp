@@ -5,7 +5,7 @@
 #include "prototype.h"
 using namespace std;
 
-int main(){
+int main() {
     bool menu_open = true;
     bool instructions_open = false;
     bool difficulty_open = false;
@@ -88,7 +88,9 @@ int main(){
 
         if (game_start) {
             initializeBoard(board, size, candy_type);
-            candyMatch(board, size);
+            while (candyMatch(board, size)) { // here if candy matches then collapse function would be called
+                collapseAndRefill(board, size, candy_type);
+            }
             game_start = false;
         }
         
